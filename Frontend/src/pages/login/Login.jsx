@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { loginApi } from '../../apis/Api'
 import { toast } from 'react-toastify'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addUser } from '../../store/userSlice'
 
@@ -124,6 +124,11 @@ const Login = () => {
                   passError && <div className="text-danger">{passError}</div>
                 }
               </div>
+
+                <Link to="/forgot_password">
+                  Forgot password?
+                </Link>
+
               <button
                 onClick={handleSubmit}
                 className="btn btn-primary mt-2 w-100">Login</button>

@@ -57,3 +57,6 @@ export const searchProductsApi = (query) => Api.get(`/api/product/search_product
 
 // count products
 export const getCount = () => Api.get('/api/product/count');
+
+// forgot password
+export const forgotPasswordApi = (data) => Api.post('/api/user/forgot_password', data);

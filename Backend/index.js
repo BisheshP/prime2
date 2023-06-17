@@ -27,6 +27,10 @@ cloudinary.config({
 
 app.use(cors(corsOptions));
 
+// set view engine
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }))
+
 //  create a route
 app.get('/', (req, res) => {
     res.send('Welcome to API');

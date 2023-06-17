@@ -14,6 +14,7 @@ import Order from "./pages/orders/Order";
 import AdminOrders from "./pages/admin/AdminOrders/AdminOrders";
 import Search from "./pages/search/Search";
 import Profile from "./pages/profile/Profile";
+import ForgotPassword from "./pages/forgot_password/ForgotPassword";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/search/:query" element={<Search />} />
 
           <Route path='/profile' element={<Profile/>} />
+          <Route path='/forgot_password' element={<ForgotPassword/>} />
 
         </Routes>
       </Router>
