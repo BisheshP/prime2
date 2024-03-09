@@ -8,7 +8,7 @@ WORKDIR /frontend-app
 COPY package*.json ./
 
 # Install app dependencies, including Material-UI 5
-RUN npm install
+RUN npm install -f
 
 # Copy the rest of the application code to the working directory
 COPY . .
