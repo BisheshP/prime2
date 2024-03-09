@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prime-backend-app
+  labels:
+    app: prime-backend-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: prime-backend-app
+  template:
+    metadata:
+      labels:
+        app: prime-backend-app
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: prime-backend-app
+        image: itsranger/prime-backend:latest
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 5000
+
